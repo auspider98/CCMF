@@ -165,8 +165,8 @@ const SITE_CONFIG = {
     "videoHoldEnabled": false,
     "videoHold": 4
   },
-  "heroHeadline": "Taste of Tradition",
-  "heroSubline": "Ven por las mejores carnitas, birria, carne asada y tamales, o disfruta de nuestros tacos, burritos, tortas y quesadillas. ¡Comida de verdad para darte fuerza cada día!\n\n\nStop by for the best carnitas, birria, carne asada, and tamales, or grab our fresh tacos, burritos, tortas, and quesadillas. Real food to fuel your day!",
+  "heroHeadline": "Prueba la Tradición  (Taste the Tradition)",
+  "heroSubline": "Ven por las mejores carnitas, birria, carne asada y tamales, o disfruta de nuestros tacos, burritos, tortas y quesadillas. ¡Comida de verdad para darte fuerza cada día!\n\nStop by for the best carnitas, birria, carne asada, and tamales, or grab our fresh tacos, burritos, tortas, and quesadillas. Real food to fuel your day!",
   "heroTrustBullets": [
     "Located next to Subway on Amnicola Highway"
   ],
@@ -292,7 +292,7 @@ const SITE_CONFIG = {
   "blogPosts": [],
   "processSteps": [],
   "processRequirements": [],
-  "ctaLabel": "Location",
+  "ctaLabel": " Ubicación (Location)",
   "ctaLinkType": "internal",
   "ctaLinkUrl": "home",
   "navDefaultOpen": false,
@@ -309,95 +309,6 @@ const SITE_CONFIG = {
   },
   "customPages": [
     {
-      "slug": "testimonials",
-      "navLabel": "Testimonials",
-      "emoji": "✉️",
-      "enabled": true,
-      "parent": null,
-      "hiddenFromNav": false,
-      "hiddenFromMainNav": false,
-      "hiddenFromFooterNav": false,
-      "sections": [
-        {
-          "type": "testimonials",
-          "label": "",
-          "background": "alt",
-          "anchorId": "testimonials",
-          "heading": "Testimonios (Testimonials)",
-          "subtitle": "",
-          "showReviews": false,
-          "count": 3,
-          "showReadAll": true,
-          "readAllLabel": "Read All Reviews",
-          "primarySource": true,
-          "items": [
-            {
-              "name": "Camden Gonzalez",
-              "initials": "CG",
-              "stars": "5",
-              "text": "I took my family to a nearby Mexican restaurant last weekend, and it was a delightful experience! The menu was extensive, offering a variety of options for everyone. We ordered a mix of tacos, burritos, and nachos, and each dish was bursting with flavor. The highlight was definitely the slow-cooked pork; it was fall-apart tender and seasoned to perfection. The kids even loved their meals, which is always a win in my book! The staff was friendly and attentive, making sure our drinks were always full. My only suggestion would be to add more vegetarian options to the menu, as it was a bit limited for my daughter. Overall, a fantastic family dining experience!",
-              "meta": "Restaurants",
-              "date": "2025-03-23"
-            },
-            {
-              "name": "Jaxson Laurent",
-              "initials": "JL",
-              "stars": "5",
-              "text": "I recently dined at a local spot and was blown away by the flavors of their carnitas. The meat was incredibly tender and seasoned perfectly. I loved the fresh salsa that accompanied it—such a vibrant kick! The ambiance was cozy and welcoming, making it a great place to unwind after a long day. My only critique would be that the service was a bit slow during peak hours, but the food more than made up for it. I can't wait to return and try more dishes from their menu!",
-              "meta": "Meat & Seafood",
-              "date": "2025-01-15"
-            },
-            {
-              "name": "Kathleen Armstrong",
-              "initials": "KA",
-              "stars": "4",
-              "text": "Had dinner at this amazing spot last week! The atmosphere was lively, and the decor had a fun, authentic vibe that really set the mood. I ordered the carnitas plate, and it did not disappoint—super juicy and flavorful. The portion size was generous, and I appreciated the fresh toppings that came with it. My only complaint would be the wait time; it took a bit longer than expected for our food to arrive. However, the staff was apologetic and friendly throughout our meal. I will definitely be coming back, especially to try their tacos next time!",
-              "meta": "",
-              "date": "2024-10-27"
-            },
-            {
-              "name": "Jeff Osborne",
-              "initials": "JO",
-              "stars": "5",
-              "text": "One of the best hidden treasures in Chattanooga! Food is awesome and the staff are very courteous. Burritos, tacos, quesadillas, tortas, stuffed with your choice of about 8 different meat options make for an amazing treat. Included are a fresh cut lime, grilled pepper and a couple of homemade sauces that help kick up the heat and flavor of their authentic delights!",
-              "meta": "",
-              "date": "2017-05-08"
-            },
-            {
-              "name": "George Armstrong",
-              "initials": "GA",
-              "stars": "5",
-              "text": "Great little place on Amnicola Hwy. Authentic street tacos, and their salsa had some good kick. It's affordable too",
-              "meta": "",
-              "date": "2025-10-03"
-            },
-            {
-              "name": "Mark Bullock",
-              "initials": "MB",
-              "stars": "5",
-              "text": "Everything on the menu is authentic and excellent. I've used them twice to cater my Cinco parties. Looking forward to making it three times!",
-              "meta": "",
-              "date": "2023-06-17"
-            }
-          ]
-        },
-        {
-          "type": "button",
-          "label": "",
-          "background": "light",
-          "anchorId": "button",
-          "primary_linkType": "internal",
-          "primary_linkLabel": "Leave Us A Message",
-          "primary_linkUrl": "contact",
-          "primary_anchorId": "",
-          "secondary_linkType": "none",
-          "secondary_linkLabel": "",
-          "secondary_linkUrl": "",
-          "secondary_anchorId": ""
-        }
-      ]
-    },
-    {
       "slug": "menu",
       "navLabel": "Menu",
       "emoji": "🧾",
@@ -412,7 +323,7 @@ const SITE_CONFIG = {
           "label": "",
           "background": "alt",
           "anchorId": "menu",
-          "heading": "Main Menu",
+          "heading": "Menú de Reproducción (Main Menu)",
           "subtitle": "",
           "visibleCards": 3,
           "cardHeight": 420,
@@ -807,6 +718,95 @@ const SITE_CONFIG = {
           "secondary_anchorId": "locations"
         }
       ]
+    },
+    {
+      "slug": "testimonials",
+      "navLabel": "Testimonials",
+      "emoji": "✉️",
+      "enabled": true,
+      "parent": null,
+      "hiddenFromNav": false,
+      "hiddenFromMainNav": false,
+      "hiddenFromFooterNav": false,
+      "sections": [
+        {
+          "type": "testimonials",
+          "label": "",
+          "background": "alt",
+          "anchorId": "testimonials",
+          "heading": "Testimonios",
+          "subtitle": "Testimonials",
+          "showReviews": false,
+          "count": 3,
+          "showReadAll": true,
+          "readAllLabel": "Read All Reviews",
+          "primarySource": true,
+          "items": [
+            {
+              "name": "Camden Gonzalez",
+              "initials": "CG",
+              "stars": "5",
+              "text": "I took my family to a nearby Mexican restaurant last weekend, and it was a delightful experience! The menu was extensive, offering a variety of options for everyone. We ordered a mix of tacos, burritos, and nachos, and each dish was bursting with flavor. The highlight was definitely the slow-cooked pork; it was fall-apart tender and seasoned to perfection. The kids even loved their meals, which is always a win in my book! The staff was friendly and attentive, making sure our drinks were always full. My only suggestion would be to add more vegetarian options to the menu, as it was a bit limited for my daughter. Overall, a fantastic family dining experience!",
+              "meta": "Restaurants",
+              "date": "2025-03-23"
+            },
+            {
+              "name": "Jaxson Laurent",
+              "initials": "JL",
+              "stars": "5",
+              "text": "I recently dined at a local spot and was blown away by the flavors of their carnitas. The meat was incredibly tender and seasoned perfectly. I loved the fresh salsa that accompanied it—such a vibrant kick! The ambiance was cozy and welcoming, making it a great place to unwind after a long day. My only critique would be that the service was a bit slow during peak hours, but the food more than made up for it. I can't wait to return and try more dishes from their menu!",
+              "meta": "Meat & Seafood",
+              "date": "2025-01-15"
+            },
+            {
+              "name": "Kathleen Armstrong",
+              "initials": "KA",
+              "stars": "4",
+              "text": "Had dinner at this amazing spot last week! The atmosphere was lively, and the decor had a fun, authentic vibe that really set the mood. I ordered the carnitas plate, and it did not disappoint—super juicy and flavorful. The portion size was generous, and I appreciated the fresh toppings that came with it. My only complaint would be the wait time; it took a bit longer than expected for our food to arrive. However, the staff was apologetic and friendly throughout our meal. I will definitely be coming back, especially to try their tacos next time!",
+              "meta": "",
+              "date": "2024-10-27"
+            },
+            {
+              "name": "Jeff Osborne",
+              "initials": "JO",
+              "stars": "5",
+              "text": "One of the best hidden treasures in Chattanooga! Food is awesome and the staff are very courteous. Burritos, tacos, quesadillas, tortas, stuffed with your choice of about 8 different meat options make for an amazing treat. Included are a fresh cut lime, grilled pepper and a couple of homemade sauces that help kick up the heat and flavor of their authentic delights!",
+              "meta": "",
+              "date": "2017-05-08"
+            },
+            {
+              "name": "George Armstrong",
+              "initials": "GA",
+              "stars": "5",
+              "text": "Great little place on Amnicola Hwy. Authentic street tacos, and their salsa had some good kick. It's affordable too",
+              "meta": "",
+              "date": "2025-10-03"
+            },
+            {
+              "name": "Mark Bullock",
+              "initials": "MB",
+              "stars": "5",
+              "text": "Everything on the menu is authentic and excellent. I've used them twice to cater my Cinco parties. Looking forward to making it three times!",
+              "meta": "",
+              "date": "2023-06-17"
+            }
+          ]
+        },
+        {
+          "type": "button",
+          "label": "",
+          "background": "light",
+          "anchorId": "button",
+          "primary_linkType": "internal",
+          "primary_linkLabel": "Leave Us A Message",
+          "primary_linkUrl": "contact",
+          "primary_anchorId": "",
+          "secondary_linkType": "none",
+          "secondary_linkLabel": "",
+          "secondary_linkUrl": "",
+          "secondary_anchorId": ""
+        }
+      ]
     }
   ],
   "aboutSections": [],
@@ -816,8 +816,8 @@ const SITE_CONFIG = {
       "label": "",
       "background": "light",
       "anchorId": "what-customers-are-saying",
-      "heading": "Customer Experiences",
-      "subtitle": "",
+      "heading": "Experiencias del Cliente",
+      "subtitle": "Customer Experiences",
       "items": [],
       "showReviews": true,
       "count": 3,
@@ -883,7 +883,7 @@ const SITE_CONFIG = {
   },
   "fontDisplayCustom": "",
   "fontBodyCustom": "",
-  "_savedAt": 1782710025739,
+  "_savedAt": 1782768897024,
   "heroPrimaryAnchorId": "",
   "heroSecondaryAnchorId": "",
   "ctaAnchorId": "locations"
