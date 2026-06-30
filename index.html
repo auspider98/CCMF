@@ -1549,6 +1549,9 @@ h2.section-title {
   transform: translateY(-4px);
   box-shadow: 0 16px 48px rgba(15,35,64,0.1);
 }
+.section-dark .testimonial-card:hover {
+  box-shadow: 0 8px 32px rgba(var(--gold-rgb), 0.3);
+}
 .testimonial-quote {
   font-family: var(--font-display);
   font-size: 64px;
@@ -2916,6 +2919,8 @@ footer {
 .cps-first-section {
   padding-top: 100px !important;
 }
+/* Image sections: match bottom padding to top so content looks centered */
+section.cps-img-section { padding-bottom: 8px; }
 .cps-first-section .cps-heading,
 .cps-first-section h1.page-banner-title,
 .cps-first-section h1.section-title {
@@ -8048,6 +8053,7 @@ function renderCustomSection(sec, idx, isFirst, allSections) {
 
     // ── IMAGE SECTION ─────────────────────────────────────────────
     case 'image': {
+      wrapper.classList.add('cps-img-section');
       const imgPath  = sec.imagePath  || '';
       const img2Path = sec.imagePath2 || '';
       const rounded  = sec.roundedCorners === true;
