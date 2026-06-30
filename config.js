@@ -821,7 +821,7 @@ const SITE_CONFIG = {
         {
           "type": "two-col",
           "label": "",
-          "background": "light",
+          "background": "dark",
           "anchorId": "homies-intro",
           "heading": "Compra el Bloque (Shop the Block)",
           "body": "Coleccionables auténticos de Homies:\nLleva la esencia del barrio a tu hogar. Creados en 1994 por el legendario artista chicano David Gonzales, los Homies evolucionaron de una tira cómica de la revista Lowrider a un fenómeno global de la cultura urbana. Ahora, es tu turno de crear tu propio barrio. Cada personaje tiene su propio estilo, historia y actitud únicos. ¡Explora nuestra colección hoy mismo y añade un pedazo de la legendaria historia urbana a tu estantería!\n\nAuthentic Homies Collectibles:\nBring the ultimate neighborhood home. First created in 1994 by legendary Chicano artist David Gonzales, Homies evolved from a Lowrider magazine comic strip into a global street-culture phenomenon. Now, it is your turn to build your block. Each character brings its own unique style, story, and attitude. Explore our collection today and add some legendary urban history to your display shelf!",
@@ -835,7 +835,7 @@ const SITE_CONFIG = {
         {
           "type": "rotating-cards",
           "label": "",
-          "background": "alt",
+          "background": "dark",
           "anchorId": "homies-cards",
           "heading": "Comprar Coleccionables (Shop Collectables)",
           "subtitle": "",
@@ -848,28 +848,54 @@ const SITE_CONFIG = {
           "autoplaySpeed": 4,
           "items": [
             {
-              "title": "",
+              "title": "Posters",
               "body": "",
-              "imagePath": "homies/homies-names-01.jpeg",
+              "imagePath": "homies/homies-poster-01.jpeg",
               "bgColor": "",
-              "fullBleed": false,
+              "fullBleed": true,
               "zoomEnabled": false,
               "textColor": "light",
-              "btnLabel": "Pósters (Posters)",
+              "btnLabel": "Pósters",
               "btnLinkType": "internal",
               "btnLinkUrl": "homies-shop",
               "btnAnchorId": "homies-posters"
+            },
+            {
+              "title": "Figurines",
+              "body": "",
+              "imagePath": "homies/homies-og.webp",
+              "bgColor": "",
+              "fullBleed": true,
+              "zoomEnabled": false,
+              "textColor": "light",
+              "btnLabel": "Figuritas",
+              "btnLinkType": "internal",
+              "btnLinkUrl": "homies-shop",
+              "btnAnchorId": "homies-figurines"
+            },
+            {
+              "title": "Key Chains",
+              "body": "",
+              "imagePath": "homies/homies-kc-latina-01.webp",
+              "bgColor": "",
+              "fullBleed": true,
+              "zoomEnabled": false,
+              "textColor": "light",
+              "btnLabel": "Llaveros",
+              "btnLinkType": "internal",
+              "btnLinkUrl": "homies-shop",
+              "btnAnchorId": "homies-key-chains"
             }
           ]
         },
         {
           "type": "pricing",
           "label": "",
-          "background": "dark",
+          "background": "light",
           "anchorId": "homies-posters",
           "heading": "Pósters (Posters)",
           "subtitle": "",
-          "maxCols": 3,
+          "maxCols": 2,
           "colFullWidth": false,
           "items": [
             {
@@ -878,7 +904,67 @@ const SITE_CONFIG = {
               "price": "$20",
               "period": "/ US Dollars",
               "icon": "",
-              "imagePath": "homies/homies-names-01.jpeg",
+              "imagePath": "homies/homies-poster-01.jpeg",
+              "imageSize": "sq",
+              "ribbon": "",
+              "note": "",
+              "cardStyle": "dark",
+              "featured": true,
+              "cta_linkLabel": "",
+              "cta_linkType": "none",
+              "cta_linkUrl": "home",
+              "cta_anchorId": "",
+              "features": []
+            }
+          ]
+        },
+        {
+          "type": "pricing",
+          "label": "",
+          "background": "alt",
+          "anchorId": "homies-figurines",
+          "heading": "Figuritas (Figurines)",
+          "subtitle": "",
+          "maxCols": 2,
+          "colFullWidth": false,
+          "items": [
+            {
+              "name": "Big Headz - Clown Prince",
+              "tagline": "Adquiera una pieza de la historia de la cultura pop chicana. Este enorme diseño clásico de 24x36 pulgadas sirve como la guía visual definitiva, nombrando y detallando meticulosamente las primeras generaciones del icónico universo de figuras de máquinas expendedoras.\n\nOwn a piece of chicano pop-culture history. This massive 24x36-inch classic layout serves as the ultimate visual roadmap, meticulously naming and detailing the early generations of the iconic vending machine figurine universe.",
+              "price": "$99",
+              "period": "/ US Dollars",
+              "icon": "",
+              "imagePath": "homies/homies-og.webp",
+              "imageSize": "sq",
+              "ribbon": "",
+              "note": "",
+              "cardStyle": "dark",
+              "featured": true,
+              "cta_linkLabel": "",
+              "cta_linkType": "none",
+              "cta_linkUrl": "home",
+              "cta_anchorId": "",
+              "features": []
+            }
+          ]
+        },
+        {
+          "type": "pricing",
+          "label": "",
+          "background": "light",
+          "anchorId": "homies-key-chains",
+          "heading": "Llaveross (Key Chains)",
+          "subtitle": "",
+          "maxCols": 2,
+          "colFullWidth": false,
+          "items": [
+            {
+              "name": "Latina Charm Key Chain",
+              "tagline": "Adquiera una pieza de la historia de la cultura pop chicana. Este enorme diseño clásico de 24x36 pulgadas sirve como la guía visual definitiva, nombrando y detallando meticulosamente las primeras generaciones del icónico universo de figuras de máquinas expendedoras.\n\nOwn a piece of chicano pop-culture history. This massive 24x36-inch classic layout serves as the ultimate visual roadmap, meticulously naming and detailing the early generations of the iconic vending machine figurine universe.",
+              "price": "$19",
+              "period": "/ US Dollars",
+              "icon": "",
+              "imagePath": "homies/homies-kc-latina-01.webp",
               "imageSize": "sq",
               "ribbon": "",
               "note": "",
@@ -965,11 +1051,12 @@ const SITE_CONFIG = {
     "home": "public",
     "about": "public",
     "cp-0": "public",
-    "cp-1": "public"
+    "cp-1": "public",
+    "cp-2": "public"
   },
   "fontDisplayCustom": "",
   "fontBodyCustom": "",
-  "_savedAt": 1782793423181,
+  "_savedAt": 1782825362419,
   "heroPrimaryAnchorId": "",
   "heroSecondaryAnchorId": "",
   "ctaAnchorId": "locations"
