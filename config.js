@@ -241,30 +241,6 @@ const SITE_CONFIG = {
   "faqs": [],
   "testimonials": [
     {
-      "name": "Camden Gonzalez",
-      "initials": "CG",
-      "stars": "5",
-      "text": "I took my family to a nearby Mexican restaurant last weekend, and it was a delightful experience! The menu was extensive, offering a variety of options for everyone. We ordered a mix of tacos, burritos, and nachos, and each dish was bursting with flavor. The highlight was definitely the slow-cooked pork; it was fall-apart tender and seasoned to perfection. The kids even loved their meals, which is always a win in my book! The staff was friendly and attentive, making sure our drinks were always full. My only suggestion would be to add more vegetarian options to the menu, as it was a bit limited for my daughter. Overall, a fantastic family dining experience!",
-      "meta": "Restaurants",
-      "date": "2025-03-23"
-    },
-    {
-      "name": "Jaxson Laurent",
-      "initials": "JL",
-      "stars": "5",
-      "text": "I recently dined at a local spot and was blown away by the flavors of their carnitas. The meat was incredibly tender and seasoned perfectly. I loved the fresh salsa that accompanied it—such a vibrant kick! The ambiance was cozy and welcoming, making it a great place to unwind after a long day. My only critique would be that the service was a bit slow during peak hours, but the food more than made up for it. I can't wait to return and try more dishes from their menu!",
-      "meta": "Meat & Seafood",
-      "date": "2025-01-15"
-    },
-    {
-      "name": "Kathleen Armstrong",
-      "initials": "KA",
-      "stars": "4",
-      "text": "Had dinner at this amazing spot last week! The atmosphere was lively, and the decor had a fun, authentic vibe that really set the mood. I ordered the carnitas plate, and it did not disappoint—super juicy and flavorful. The portion size was generous, and I appreciated the fresh toppings that came with it. My only complaint would be the wait time; it took a bit longer than expected for our food to arrive. However, the staff was apologetic and friendly throughout our meal. I will definitely be coming back, especially to try their tacos next time!",
-      "meta": "",
-      "date": "2024-10-27"
-    },
-    {
       "name": "Jeff Osborne",
       "initials": "JO",
       "stars": "5",
@@ -287,6 +263,54 @@ const SITE_CONFIG = {
       "text": "Everything on the menu is authentic and excellent. I've used them twice to cater my Cinco parties. Looking forward to making it three times!",
       "meta": "",
       "date": "2023-06-17"
+    },
+    {
+      "name": "JB",
+      "initials": "JB",
+      "stars": "5",
+      "text": "We are from Sacramento California (look up Chandos Tacos on Arden Fair Mall).... this little place reminded me of super delicious flavorful street tacos!  We are in Tennessee to stay and miss real authentic street tacos that have flavor!! This little gem has it and deserves 5 ⭐️ ⭐️ ⭐️ ⭐️ ⭐️!!!\n** By the way... Google map it and keep your eyes open so you don’t miss it!!!",
+      "meta": "",
+      "date": "2021-03-23"
+    },
+    {
+      "name": "Sandy Giamportone",
+      "initials": "SG",
+      "stars": "5",
+      "text": "The food was so absolutely amazing.  The service was quick and friendly.  The inside is small but nice.  I want to come here all the time now.  I can personally recommend the tortas, tacos, and burritos.",
+      "meta": "",
+      "date": "2019-04-27"
+    },
+    {
+      "name": "Hannah Schobert",
+      "initials": "HS",
+      "stars": "5",
+      "text": "A friend of mine from Mexico recommend this place so I had to try it! I got the burrito with carnitas and it was delicious! The salsas were perfect and I couldn't have asked for anything more honestly. You gotta try this place if you're a fan of authentic Mexican food.",
+      "meta": "",
+      "date": "2021-11-15"
+    },
+    {
+      "name": "Noel Hurtado",
+      "initials": "NH",
+      "stars": "5",
+      "text": "The tacos were authentic, the lady taking my order was very nice and made sure my food was correct and the atmosphere is like the little corner store in Mexico which was really comforting to see.\nThere's not really a place to sit down and eat and there’s no marked parking spots but it is placed right next to an old gas station that’s abandoned so there’s a lot of parking",
+      "meta": "",
+      "date": "2023-09-12"
+    },
+    {
+      "name": "Erastos Evdoxiadis",
+      "initials": "EE",
+      "stars": "5",
+      "text": "Excellent little place to eat at. We went for lunch and it was our first time there. We ate a burrito, a torta, and quesadilla. It was all well done, fresh and tasty. I definitely recommend this place to anyone.",
+      "meta": "",
+      "date": "2021-10-08"
+    },
+    {
+      "name": "Bruno Cazarine",
+      "initials": "BC",
+      "stars": "5",
+      "text": "Buenísimo la comida e serviço! I love taking my lunch break here, it tastes like home.",
+      "meta": "",
+      "date": "2020-08-03"
     }
   ],
   "blogPosts": [],
@@ -388,6 +412,29 @@ const SITE_CONFIG = {
           ]
         },
         {
+          "type": "logo-strip",
+          "label": "",
+          "background": "alt",
+          "anchorId": "logo-strip",
+          "subtitle": "Entrega del Pedido (Order Delivery)",
+          "captionPos": "above",
+          "logoSize": "large",
+          "items": [
+            {
+              "imagePath": "food/Uber_Eats.webp",
+              "alt": "",
+              "caption": "Service fee 5%–15% · Delivery fees start at $0.50",
+              "linkUrl": "https://www.ubereats.com/store/carnitas-carmelitas-amnicola-hwy/dUQqoHf8TrGBhPxjMPT4KA?utm_campaign=CM2508147-search-free-nonbrand-google-pas_e_all_acq_Global&utm_medium=search-free-nonbrand&utm_source=google-pas&rwg_token=AE37R_iA0ghwLdd4ZC85mRLZUAIcdmJdIy28aXIowTgTLQzzgJDkXsm4yEuxUaQndqzs_Frf6UDHC02a2gMnTJJTIaN5Z7p-eA%3D%3D"
+            },
+            {
+              "imagePath": "food/Postmates-Emblem.png",
+              "alt": "",
+              "caption": "Service fee 5%–15% · Delivery fees start at $0.50",
+              "linkUrl": "https://www.postmates.com/store/carnitas-carmelitas-amnicola-hwy/dUQqoHf8TrGBhPxjMPT4KA?utm_campaign=CM2508147-search-free-nonbrand-google-pas_e_all_acq_Global&utm_medium=search-free-nonbrand&utm_source=google-pas&rwg_token=AE37R_g0Kw9IZNdwsFZW8sJ1e8zmvHGeXu3g16qEQpihphJ_KglX2Mu6oQLAhEGUdumGr_NUje0QMMwfhpI2OK5Uh88zjp5mBA%3D%3D"
+            }
+          ]
+        },
+        {
           "type": "pricing",
           "label": "",
           "background": "light",
@@ -395,7 +442,7 @@ const SITE_CONFIG = {
           "heading": "Al Estilo Michoacan (Michoacan Style)",
           "subtitle": "Meat Choices\n• Carnitas (Fried Pork)\n• Birria (Beef Braised)\n• Carne Asada (Grill Steak)\n• Chorizo (Mexican Sausage)\n• Pollo (Chicken)\n• Al pastor (Marinated Pork)\n\nSpecial Meat Choices\n• Lengua (Beef Tongue) - Add $1.75\n• Buche (Pig Crop)\n• Tripa (Intestines) - Add $0.75\n• Pescado (Fish) - Add $0.75\n• Camaron (Shrimp) - Add $0.75\n\nAll your orders are served with a side of Lime, Salsa verde, Salsa roja and a grilled Jalapeño.\n\nSalsas are served on side.",
           "maxCols": 2,
-          "colFullWidth": false,
+          "colFullWidth": true,
           "items": [
             {
               "name": "Tortas",
@@ -404,7 +451,7 @@ const SITE_CONFIG = {
               "period": "/ choice of meat",
               "icon": "",
               "imagePath": "food/torta-01.png",
-              "imageSize": "sq",
+              "imageSize": "md",
               "ribbon": "",
               "note": "",
               "cardStyle": "dark",
@@ -433,7 +480,7 @@ const SITE_CONFIG = {
               "period": "/ choice of meat",
               "icon": "",
               "imagePath": "food/quesadilla -01.png",
-              "imageSize": "sq",
+              "imageSize": "md",
               "ribbon": "",
               "note": "",
               "cardStyle": "dark",
@@ -462,7 +509,7 @@ const SITE_CONFIG = {
               "period": "/ choice of meat",
               "icon": "🌯",
               "imagePath": "food/burrito-01.png",
-              "imageSize": "sq",
+              "imageSize": "md",
               "ribbon": "",
               "note": "",
               "cardStyle": "dark",
@@ -491,7 +538,7 @@ const SITE_CONFIG = {
               "period": "/ choice of meat",
               "icon": "",
               "imagePath": "food/tacos-01.png",
-              "imageSize": "sq",
+              "imageSize": "md",
               "ribbon": "",
               "note": "",
               "cardStyle": "dark",
@@ -520,7 +567,7 @@ const SITE_CONFIG = {
               "period": "/ Carnitas (Pork) or Pollo (Chicken)",
               "icon": "",
               "imagePath": "food/tamales.png",
-              "imageSize": "sq",
+              "imageSize": "md",
               "ribbon": "",
               "note": "",
               "cardStyle": "dark",
@@ -550,7 +597,7 @@ const SITE_CONFIG = {
               "period": "",
               "icon": "",
               "imagePath": "food/torta-01.png",
-              "imageSize": "sq",
+              "imageSize": "md",
               "ribbon": "",
               "note": "",
               "cardStyle": "light",
@@ -567,8 +614,8 @@ const SITE_CONFIG = {
               "price": "$10.50",
               "period": "",
               "icon": "",
-              "imagePath": "food/special-carne-azada.png",
-              "imageSize": "sq",
+              "imagePath": "food/specialties-carne-azada.png",
+              "imageSize": "md",
               "ribbon": "",
               "note": "",
               "cardStyle": "light",
@@ -586,7 +633,7 @@ const SITE_CONFIG = {
               "period": "",
               "icon": "",
               "imagePath": "food/burrito-01.png",
-              "imageSize": "sq",
+              "imageSize": "md",
               "ribbon": "",
               "note": "",
               "cardStyle": "light",
@@ -604,7 +651,7 @@ const SITE_CONFIG = {
               "period": "",
               "icon": "",
               "imagePath": "food/tacos-01.png",
-              "imageSize": "sq",
+              "imageSize": "md",
               "ribbon": "",
               "note": "",
               "cardStyle": "light",
@@ -713,7 +760,7 @@ const SITE_CONFIG = {
           "primary_linkUrl": "",
           "primary_anchorId": "",
           "secondary_linkType": "internal",
-          "secondary_linkLabel": "Our Location",
+          "secondary_linkLabel": "Ubicación (Location)",
           "secondary_linkUrl": "home",
           "secondary_anchorId": "locations"
         }
@@ -743,30 +790,6 @@ const SITE_CONFIG = {
           "primarySource": true,
           "items": [
             {
-              "name": "Camden Gonzalez",
-              "initials": "CG",
-              "stars": "5",
-              "text": "I took my family to a nearby Mexican restaurant last weekend, and it was a delightful experience! The menu was extensive, offering a variety of options for everyone. We ordered a mix of tacos, burritos, and nachos, and each dish was bursting with flavor. The highlight was definitely the slow-cooked pork; it was fall-apart tender and seasoned to perfection. The kids even loved their meals, which is always a win in my book! The staff was friendly and attentive, making sure our drinks were always full. My only suggestion would be to add more vegetarian options to the menu, as it was a bit limited for my daughter. Overall, a fantastic family dining experience!",
-              "meta": "Restaurants",
-              "date": "2025-03-23"
-            },
-            {
-              "name": "Jaxson Laurent",
-              "initials": "JL",
-              "stars": "5",
-              "text": "I recently dined at a local spot and was blown away by the flavors of their carnitas. The meat was incredibly tender and seasoned perfectly. I loved the fresh salsa that accompanied it—such a vibrant kick! The ambiance was cozy and welcoming, making it a great place to unwind after a long day. My only critique would be that the service was a bit slow during peak hours, but the food more than made up for it. I can't wait to return and try more dishes from their menu!",
-              "meta": "Meat & Seafood",
-              "date": "2025-01-15"
-            },
-            {
-              "name": "Kathleen Armstrong",
-              "initials": "KA",
-              "stars": "4",
-              "text": "Had dinner at this amazing spot last week! The atmosphere was lively, and the decor had a fun, authentic vibe that really set the mood. I ordered the carnitas plate, and it did not disappoint—super juicy and flavorful. The portion size was generous, and I appreciated the fresh toppings that came with it. My only complaint would be the wait time; it took a bit longer than expected for our food to arrive. However, the staff was apologetic and friendly throughout our meal. I will definitely be coming back, especially to try their tacos next time!",
-              "meta": "",
-              "date": "2024-10-27"
-            },
-            {
               "name": "Jeff Osborne",
               "initials": "JO",
               "stars": "5",
@@ -789,6 +812,54 @@ const SITE_CONFIG = {
               "text": "Everything on the menu is authentic and excellent. I've used them twice to cater my Cinco parties. Looking forward to making it three times!",
               "meta": "",
               "date": "2023-06-17"
+            },
+            {
+              "name": "JB",
+              "initials": "JB",
+              "stars": "5",
+              "text": "We are from Sacramento California (look up Chandos Tacos on Arden Fair Mall).... this little place reminded me of super delicious flavorful street tacos!  We are in Tennessee to stay and miss real authentic street tacos that have flavor!! This little gem has it and deserves 5 ⭐️ ⭐️ ⭐️ ⭐️ ⭐️!!!\n** By the way... Google map it and keep your eyes open so you don’t miss it!!!",
+              "meta": "",
+              "date": "2021-03-23"
+            },
+            {
+              "name": "Sandy Giamportone",
+              "initials": "SG",
+              "stars": "5",
+              "text": "The food was so absolutely amazing.  The service was quick and friendly.  The inside is small but nice.  I want to come here all the time now.  I can personally recommend the tortas, tacos, and burritos.",
+              "meta": "",
+              "date": "2019-04-27"
+            },
+            {
+              "name": "Hannah Schobert",
+              "initials": "HS",
+              "stars": "5",
+              "text": "A friend of mine from Mexico recommend this place so I had to try it! I got the burrito with carnitas and it was delicious! The salsas were perfect and I couldn't have asked for anything more honestly. You gotta try this place if you're a fan of authentic Mexican food.",
+              "meta": "",
+              "date": "2021-11-15"
+            },
+            {
+              "name": "Noel Hurtado",
+              "initials": "NH",
+              "stars": "5",
+              "text": "The tacos were authentic, the lady taking my order was very nice and made sure my food was correct and the atmosphere is like the little corner store in Mexico which was really comforting to see.\nThere's not really a place to sit down and eat and there’s no marked parking spots but it is placed right next to an old gas station that’s abandoned so there’s a lot of parking",
+              "meta": "",
+              "date": "2023-09-12"
+            },
+            {
+              "name": "Erastos Evdoxiadis",
+              "initials": "EE",
+              "stars": "5",
+              "text": "Excellent little place to eat at. We went for lunch and it was our first time there. We ate a burrito, a torta, and quesadilla. It was all well done, fresh and tasty. I definitely recommend this place to anyone.",
+              "meta": "",
+              "date": "2021-10-08"
+            },
+            {
+              "name": "Bruno Cazarine",
+              "initials": "BC",
+              "stars": "5",
+              "text": "Buenísimo la comida e serviço! I love taking my lunch break here, it tastes like home.",
+              "meta": "",
+              "date": "2020-08-03"
             }
           ]
         },
@@ -905,7 +976,7 @@ const SITE_CONFIG = {
               "period": "/ US Dollars",
               "icon": "",
               "imagePath": "homies/homies-poster-01.jpeg",
-              "imageSize": "sq",
+              "imageSize": "lg",
               "ribbon": "",
               "note": "",
               "cardStyle": "dark",
@@ -935,7 +1006,7 @@ const SITE_CONFIG = {
               "period": "/ US Dollars",
               "icon": "",
               "imagePath": "homies/homies-og.webp",
-              "imageSize": "sq",
+              "imageSize": "lg",
               "ribbon": "",
               "note": "",
               "cardStyle": "dark",
@@ -965,7 +1036,7 @@ const SITE_CONFIG = {
               "period": "/ US Dollars",
               "icon": "",
               "imagePath": "homies/homies-kc-latina-01.webp",
-              "imageSize": "sq",
+              "imageSize": "lg",
               "ribbon": "",
               "note": "",
               "cardStyle": "dark",
@@ -977,12 +1048,49 @@ const SITE_CONFIG = {
               "features": []
             }
           ]
+        },
+        {
+          "type": "button",
+          "label": "",
+          "background": "light",
+          "anchorId": "button",
+          "primary_linkType": "none",
+          "primary_linkLabel": "",
+          "primary_linkUrl": "",
+          "primary_anchorId": "",
+          "secondary_linkType": "internal",
+          "secondary_linkLabel": "Ubicación (Location)",
+          "secondary_linkUrl": "home",
+          "secondary_anchorId": "locations"
         }
       ]
     }
   ],
   "aboutSections": [],
   "homeSections": [
+    {
+      "type": "logo-strip",
+      "label": "",
+      "background": "alt",
+      "anchorId": "logo-strip",
+      "subtitle": "Entrega del Pedido (Order Delivery)",
+      "captionPos": "above",
+      "logoSize": "large",
+      "items": [
+        {
+          "imagePath": "food/Uber_Eats.webp",
+          "alt": "",
+          "caption": "Service fee 5%–15% · Delivery fees start at $0.50",
+          "linkUrl": "https://www.ubereats.com/store/carnitas-carmelitas-amnicola-hwy/dUQqoHf8TrGBhPxjMPT4KA?utm_campaign=CM2508147-search-free-nonbrand-google-pas_e_all_acq_Global&utm_medium=search-free-nonbrand&utm_source=google-pas&rwg_token=AE37R_iA0ghwLdd4ZC85mRLZUAIcdmJdIy28aXIowTgTLQzzgJDkXsm4yEuxUaQndqzs_Frf6UDHC02a2gMnTJJTIaN5Z7p-eA%3D%3D"
+        },
+        {
+          "imagePath": "food/Postmates-Emblem.png",
+          "alt": "",
+          "caption": "Service fee 5%–15% · Delivery fees start at $0.50",
+          "linkUrl": "https://www.postmates.com/store/carnitas-carmelitas-amnicola-hwy/dUQqoHf8TrGBhPxjMPT4KA?utm_campaign=CM2508147-search-free-nonbrand-google-pas_e_all_acq_Global&utm_medium=search-free-nonbrand&utm_source=google-pas&rwg_token=AE37R_g0Kw9IZNdwsFZW8sJ1e8zmvHGeXu3g16qEQpihphJ_KglX2Mu6oQLAhEGUdumGr_NUje0QMMwfhpI2OK5Uh88zjp5mBA%3D%3D"
+        }
+      ]
+    },
     {
       "type": "testimonials",
       "label": "",
@@ -1056,7 +1164,7 @@ const SITE_CONFIG = {
   },
   "fontDisplayCustom": "",
   "fontBodyCustom": "",
-  "_savedAt": 1782825966589,
+  "_savedAt": 1782847341141,
   "heroPrimaryAnchorId": "",
   "heroSecondaryAnchorId": "",
   "ctaAnchorId": "locations"
