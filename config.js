@@ -100,7 +100,12 @@ const SITE_CONFIG = {
       "hours": "Closed"
     }
   ],
-  "socialLinks": [],
+  "socialLinks": [
+    {
+      "platform": "facebook",
+      "url": "https://www.facebook.com/share/18eKhyy8ZL/"
+    }
+  ],
   "stats": [],
   "colors": {
     "navy": "#8e1b1b",
@@ -1186,7 +1191,7 @@ const SITE_CONFIG = {
   },
   "fontDisplayCustom": "",
   "fontBodyCustom": "",
-  "_savedAt": 1782875490965,
+  "_savedAt": 1782878386696,
   "heroPrimaryAnchorId": "",
   "heroSecondaryAnchorId": "",
   "ctaAnchorId": "locations"
