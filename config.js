@@ -16,7 +16,7 @@ const SITE_CONFIG = {
   "tagline": "Authentic Mexican Food",
   "preloaderTagline": "Authentic Mexican Food • Amnicola Hwy",
   "copyrightText": "",
-  "logoPrimary": "logos/carnita-carmelita-CC-logo.png",
+  "logoPrimary": "logos/carnita-carmelita-CC-sq.png",
   "logoAlternate": "logos/carnita-carmelita.png",
   "logoHeaderChoice": "alternate",
   "logoHeaderHeight": 46,
@@ -354,7 +354,7 @@ const SITE_CONFIG = {
           "showDots": true,
           "showArrows": true,
           "showPeek": false,
-          "autoplay": true,
+          "autoplay": false,
           "autoplaySpeed": 4,
           "items": [
             {
@@ -373,7 +373,7 @@ const SITE_CONFIG = {
             {
               "title": "",
               "body": "Specialties",
-              "imagePath": "food/plate-burrito.png",
+              "imagePath": "food/specialties-carne-azada.png",
               "bgColor": "",
               "fullBleed": true,
               "zoomEnabled": false,
@@ -1093,7 +1093,7 @@ const SITE_CONFIG = {
     {
       "type": "logo-strip",
       "label": "",
-      "background": "alt",
+      "background": "light",
       "anchorId": "logo-strip",
       "subtitle": "Entrega del Pedido (Order Delivery)",
       "captionPos": "above",
@@ -1116,7 +1116,7 @@ const SITE_CONFIG = {
     {
       "type": "testimonials",
       "label": "",
-      "background": "light",
+      "background": "alt",
       "anchorId": "what-customers-are-saying",
       "heading": "Testimonios (Testimonials)",
       "subtitle": "",
@@ -1130,7 +1130,7 @@ const SITE_CONFIG = {
     {
       "type": "locations",
       "label": "",
-      "background": "light",
+      "background": "alt",
       "anchorId": "locations",
       "items": [
         {
@@ -1186,7 +1186,7 @@ const SITE_CONFIG = {
   },
   "fontDisplayCustom": "",
   "fontBodyCustom": "",
-  "_savedAt": 1782854633442,
+  "_savedAt": 1782875490965,
   "heroPrimaryAnchorId": "",
   "heroSecondaryAnchorId": "",
   "ctaAnchorId": "locations"
