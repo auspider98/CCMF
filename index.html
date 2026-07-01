@@ -1864,12 +1864,14 @@ h2.section-title {
 }
 .contact-detail-text { font-size: 14px; line-height: 1.7; }
 .contact-detail-text strong { display: block; color: #fff; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 4px; }
+.contact-detail-text a { color: #fff; text-decoration: none; }
+.contact-detail-text a:hover { text-decoration: underline; }
 .contact-hours { margin-top: 32px; }
 .contact-hours-label {
   font-size: 11px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: #fff;
   margin-bottom: 12px;
 }
 .hours-rows-grid {
@@ -3771,8 +3773,6 @@ section.cps-img-section { padding-bottom: 8px; }
   line-height: 1.5;
 }
 .cps-loc-detail-icon { flex-shrink: 0; font-size: 1rem; margin-top: 1px; }
-.cps-loc-detail a { color: var(--gold); text-decoration: none; }
-.cps-loc-detail a:hover { text-decoration: underline; }
 .cps-loc-hours {
   margin-top: 4px;
   border-top: 1px solid rgba(var(--navy-rgb), 0.08);
@@ -3782,10 +3782,12 @@ section.cps-img-section { padding-bottom: 8px; }
   font-size: 10px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--text-head);
   font-weight: 700;
   margin-bottom: 6px;
 }
+.cps-loc-detail a { color: var(--text-head); text-decoration: none; }
+.cps-loc-detail a:hover { text-decoration: underline; }
 .cps-loc-hours-grid {
   display: inline-grid;
   grid-template-columns: auto auto;
@@ -3829,9 +3831,9 @@ section.cps-img-section { padding-bottom: 8px; }
 .cps-section-dark .cps-loc-name { color: #fff; }
 .cps-section-dark .cps-loc-detail { color: rgba(255,255,255,0.85); }
 .cps-section-dark .cps-loc-hours-grid { color: rgba(255,255,255,0.75); }
-.cps-section-dark .cps-loc-detail a { color: var(--gold-light); }
+.cps-section-dark .cps-loc-detail a { color: #fff; }
 .cps-section-dark .cps-loc-hours { border-top-color: rgba(255,255,255,0.1); }
-.cps-section-dark .cps-loc-hours-label { color: var(--gold-light); }
+.cps-section-dark .cps-loc-hours-label { color: #fff; }
 .cps-section-dark .cps-loc-map-btn { border-color: var(--gold-light); color: var(--gold-light); }
 .cps-section-dark .cps-loc-map-btn:hover { background: var(--gold-light); color: var(--navy); }
 
@@ -3874,9 +3876,9 @@ section.cps-img-section { padding-bottom: 8px; }
 }
 .cps-section-dark .cps-loc-feature-name { color: #fff; }
 .cps-section-dark .cps-loc-feature-info .cps-loc-detail { color: rgba(255,255,255,0.85); }
-.cps-section-dark .cps-loc-feature-info .cps-loc-detail a { color: var(--gold-light); }
+.cps-section-dark .cps-loc-feature-info .cps-loc-detail a { color: #fff; }
 .cps-section-dark .cps-loc-feature-info .cps-loc-hours { border-top-color: rgba(255,255,255,0.1); }
-.cps-section-dark .cps-loc-feature-info .cps-loc-hours-label { color: var(--gold-light); }
+.cps-section-dark .cps-loc-feature-info .cps-loc-hours-label { color: #fff; }
 .cps-section-dark .cps-loc-feature-info .cps-loc-hours-grid { color: rgba(255,255,255,0.75); }
 .cps-section-dark .cps-loc-map-btn { border-color: var(--gold-light); color: var(--gold-light); }
 .cps-section-dark .cps-loc-map-btn:hover { background: var(--gold-light); color: var(--navy); }
@@ -5281,9 +5283,9 @@ function buildContact() {
       return `<div class="contact-info contact-location">
         ${loc.name ? `<div class="contact-location-name">${loc.name}</div>` : `<h3>${CFG.firmName}</h3>`}
         ${addrParts.length ? `<div class="contact-detail"><div class="contact-detail-text">${addrParts.join('<br>')}</div></div>` : ''}
-        ${loc.phone ? `<div class="contact-detail"><div class="contact-detail-text"><strong>Phone</strong><a href="tel:${loc.phoneRaw||loc.phone}" style="color:var(--gold)">${loc.phone}</a></div></div>` : ''}
+        ${loc.phone ? `<div class="contact-detail"><div class="contact-detail-text"><strong>Phone</strong><a href="tel:${loc.phoneRaw||loc.phone}">${loc.phone}</a></div></div>` : ''}
         ${loc.fax   ? `<div class="contact-detail"><div class="contact-detail-text"><strong>Fax</strong><span>${loc.fax}</span></div></div>` : ''}
-        ${loc.email ? `<div class="contact-detail"><div class="contact-detail-text"><strong>Email</strong><a href="mailto:${loc.email}" style="color:var(--gold)">${loc.email}</a></div></div>` : ''}
+        ${loc.email ? `<div class="contact-detail"><div class="contact-detail-text"><strong>Email</strong><a href="mailto:${loc.email}">${loc.email}</a></div></div>` : ''}
         ${hoursHtml}
       </div>`;
     }).join('');
