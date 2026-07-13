@@ -7783,20 +7783,23 @@ function renderCustomSection(sec, idx, isFirst, allSections, pageSlug) {
       } else {
         headingColor = '#fff'; bodyColor = 'rgba(255,255,255,0.75)';
       }
-      let headingGapStyle = ` style="color:${headingColor} !important;${textAnimVar}"`;
-      let bodyGapStyle = ` style="color:${bodyColor} !important;${textAnimVar}"`;
+      const headingMaxWidth = sec.headingFullWidth ? 'none' : (Math.max(200, parseInt(sec.headingMaxWidth) || 820) + 'px');
+      const subtitleMaxWidth = sec.subtitleFullWidth ? 'none' : (Math.max(200, parseInt(sec.subtitleMaxWidth) || 620) + 'px');
+      let headingGapStyle = ` style="color:${headingColor} !important;max-width:${headingMaxWidth};${textAnimVar}"`;
+      let bodyGapStyle = ` style="color:${bodyColor} !important;max-width:${subtitleMaxWidth};${textAnimVar}"`;
       let innerPaddingStyle = '';
+      const bottomSpacingPx = sec.bottomSpacing ? 20 : 0;
       if (heightVariant === 'custom') {
         const customHeight = Math.max(100, parseInt(sec.customHeight) || 400);
-        wrapper.style.height = customHeight + 'px';
+        wrapper.style.height = (customHeight + bottomSpacingPx) + 'px';
         // t=0 at the 100px floor (tightest), t=1 at 550px+ (normal spacing).
         // Interpolating toward explicit floor values (rather than multiplying the
         // normal values down) gives a real, tunable minimum instead of just scaling
         // proportionally — important for line-height, which can't approach zero.
         const t = Math.max(0, Math.min(1, (customHeight - 100) / (550 - 100)));
         const lerp = (min, max) => min + (max - min) * t;
-        headingGapStyle = ` style="color:${headingColor} !important;${textAnimVar}margin-bottom:${Math.round(lerp(2, 20))}px;"`;
-        bodyGapStyle = ` style="color:${bodyColor} !important;${textAnimVar}margin-bottom:${Math.round(lerp(3, 32))}px;line-height:${lerp(1.1, 1.7).toFixed(2)};"`;
+        headingGapStyle = ` style="color:${headingColor} !important;max-width:${headingMaxWidth};${textAnimVar}margin-bottom:${Math.round(lerp(2, 20))}px;"`;
+        bodyGapStyle = ` style="color:${bodyColor} !important;max-width:${subtitleMaxWidth};${textAnimVar}margin-bottom:${Math.round(lerp(3, 32))}px;line-height:${lerp(1.1, 1.7).toFixed(2)};"`;
         // Bottom padding only needs real clearance if dots or a visible text link
         // are actually rendered below the text — otherwise it's just trailing whitespace.
         const willHaveDots = bgType === 'slideshow' && bg.slides && bg.slides.length > 1 && bg.showDots !== false;
@@ -7804,6 +7807,10 @@ function renderCustomSection(sec, idx, isFirst, allSections, pageSlug) {
         innerPaddingStyle = ` style="padding-bottom:${Math.round(lerp(bottomFloor, 60))}px;"`;
       } else {
         wrapper.classList.add('cps-hero-section--' + heightVariant);
+        if (bottomSpacingPx) {
+          const baseHeight = heightVariant === 'full' ? '100vh' : '60vh';
+          wrapper.style.height = `calc(${baseHeight} + ${bottomSpacingPx}px)`;
+        }
       }
       if (isMedia) wrapper.classList.add('cps-hero-section--media');
 
@@ -7822,7 +7829,7 @@ function renderCustomSection(sec, idx, isFirst, allSections, pageSlug) {
         overlayHtml = `<div class="cps-hero-section-overlay" style="${overlayStyle}"></div>`;
 
         if (bg.shadowEnabled !== false) {
-          const shadowStyle = `background:linear-gradient(to top, rgba(${rr},${gg},${bb},0.38), rgba(${rr},${gg},${bb},0));`;
+          const shadowStyle = `background:linear-gradient(to top, rgba(${rr},${gg},${bb},0.38), rgba(${rr},${gg},${bb},0));${bottomSpacingPx ? `bottom:${bottomSpacingPx}px;` : ''}`;
           shadowHtml = `<div class="cps-hero-section-shadow" style="${shadowStyle}"></div>`;
         }
       }
@@ -7838,7 +7845,7 @@ function renderCustomSection(sec, idx, isFirst, allSections, pageSlug) {
           `<div class="cps-hero-section-slide${i === 0 ? ' active' : ''}" style="background-image:url('${escAttr(s.imagePath)}');background-position:${s.position || 'center center'};"></div>`
         ).join('');
         if (bg.slides.length > 1 && bg.showDots !== false) {
-          dotsHtml = `<div class="cps-hero-section-dots" id="${heroId}-dots">` +
+          dotsHtml = `<div class="cps-hero-section-dots" id="${heroId}-dots"${bottomSpacingPx ? ` style="bottom:${16 + bottomSpacingPx}px;"` : ''}>` +
             bg.slides.map((_, i) => `<div class="cps-hero-section-dot${i === 0 ? ' active' : ''}" data-idx="${i}"></div>`).join('') +
             `</div>`;
         }
@@ -7859,11 +7866,11 @@ function renderCustomSection(sec, idx, isFirst, allSections, pageSlug) {
       }
 
       wrapper.innerHTML = `
-        <div class="cps-hero-section-clip reveal${mediaAnimClass}" style="${mediaAnimVar}">
+        <div class="cps-hero-section-clip reveal${mediaAnimClass}" style="${mediaAnimVar}${bottomSpacingPx ? `bottom:${bottomSpacingPx}px;` : ''}">
           <div class="cps-hero-section-bg" id="${heroId}-bg" style="${bgColorStyle}">${bgHtml}</div>
           ${overlayHtml}
-          ${shadowHtml}
         </div>
+        ${shadowHtml}
         <div class="container">
           <div class="${innerClass}"${innerPaddingStyle}>
             ${sec.heading ? `<${headTag} class="${headClass} cps-heading reveal${textAnimClass}"${headingGapStyle}>${sec.heading}</${headTag}>` : ''}
