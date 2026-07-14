@@ -931,7 +931,7 @@ const SITE_CONFIG = {
         {
           "type": "hero-section",
           "label": "",
-          "background": "dark",
+          "background": "alt",
           "anchorId": "hero-section",
           "heading": "Compra el Bloque (Shop the Block)",
           "subtitle": "",
@@ -951,7 +951,7 @@ const SITE_CONFIG = {
             "type": "image",
             "bgColor": "#0f2340",
             "imagePath": "homies/homies-group.png",
-            "imagePosition": "50% 21%",
+            "imagePosition": "50% 12%",
             "slides": [],
             "slideDuration": 8,
             "autoplay": true,
@@ -960,8 +960,8 @@ const SITE_CONFIG = {
             "videoWebm": "",
             "videoPoster": "",
             "overlayColor": "#000000",
-            "overlayOpacity": 0.35,
-            "shadowEnabled": false
+            "overlayOpacity": 0.7,
+            "shadowEnabled": true
           },
           "linkType": "none",
           "linkLabel": "",
@@ -1301,7 +1301,7 @@ const SITE_CONFIG = {
   },
   "fontDisplayCustom": "",
   "fontBodyCustom": "",
-  "_savedAt": 1783967101847,
+  "_savedAt": 1783995128822,
   "heroPrimaryAnchorId": "",
   "heroSecondaryAnchorId": "",
   "ctaAnchorId": "locations"

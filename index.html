@@ -7762,6 +7762,7 @@ function renderCustomSection(sec, idx, isFirst, allSections, pageSlug) {
       }
 
       wrapper.classList.add('cps-hero-section-wrapper');
+      if (sec.bottomSpacing) wrapper.style.boxShadow = 'none';
 
       // Text color — White / Black / Chrome Background / Light Background / Match
       // Section Background. White and Black are fixed values; the other three
@@ -7865,11 +7866,16 @@ function renderCustomSection(sec, idx, isFirst, allSections, pageSlug) {
         wrapper.setAttribute('aria-label', linkLabel);
       }
 
+      const mediaShadowCard = bottomSpacingPx
+        ? `<div style="position:absolute;inset:0;bottom:${bottomSpacingPx}px;box-shadow:0 9px 15px -4px rgba(0,0,0,0.45);pointer-events:none;"></div>`
+        : '';
+
       wrapper.innerHTML = `
         <div class="cps-hero-section-clip reveal${mediaAnimClass}" style="${mediaAnimVar}${bottomSpacingPx ? `bottom:${bottomSpacingPx}px;` : ''}">
           <div class="cps-hero-section-bg" id="${heroId}-bg" style="${bgColorStyle}">${bgHtml}</div>
           ${overlayHtml}
         </div>
+        ${mediaShadowCard}
         ${shadowHtml}
         <div class="container">
           <div class="${innerClass}"${innerPaddingStyle}>
