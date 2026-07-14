@@ -3655,8 +3655,9 @@ section.cps-hero-section-wrapper {
 .cps-hero-section-dot.active::after { background: var(--gold); width: 40px; }
 
 @media (max-width: 640px) {
-  .cps-hero-section--full { min-height: 520px; }
+  .cps-hero-section--full { min-height: 520px; max-height: 780px; }
   .cps-hero-section-inner { padding-top: 100px; }
+  .cps-hero-section-slide { background-position: var(--hero-mobile-pos) !important; }
 }
 
 /* ── IMAGE SECTION ────────────────────────────────────────────── */
@@ -4669,6 +4670,19 @@ section.cps-hero-section-wrapper {
 .cps-popup-split-img { flex: 1 1 40%; background-size: cover; background-position: center; }
 .cps-popup-split .cps-popup-modal-body { flex: 1 1 60%; display: flex; flex-direction: column; justify-content: center; }
 
+/* Full Image (No Crop) — shows the whole image at its own natural proportions
+   (width:100%, height:auto) rather than cropping it to fill a fixed area, so a
+   designed graphic with its own baked-in message always displays intact. */
+.cps-popup-nocrop-wrap { position: relative; }
+.cps-popup-nocrop-wrap--clickable { cursor: pointer; }
+.cps-popup-nocrop-wrap--clickable:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.cps-popup-nocrop-img { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+.cps-popup-nocrop-overlay-body {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 28px;
+}
+
 /* Toast thumbnail */
 .cps-popup-thumb {
   width: 64px; height: 64px; flex-shrink: 0;
@@ -4982,7 +4996,6 @@ const SITE_DEFAULTS = {
   services: [],
   faqs: [],
   testimonials: [],
-  blogPosts: [],
   processSteps: [],
   processRequirements: [],
   search: {
@@ -7236,8 +7249,9 @@ function initPopupSection(sec, idx, allSections, pageSlug) {
   if (sessionStorage.getItem(sessionKey)) return; // already shown this session
 
   const popupStyle = sec.popupStyle === 'toast' ? 'toast' : 'modal';
-  const imageLayout = ['top','full','left','right'].includes(sec.imageLayout) ? sec.imageLayout : 'none';
+  const imageLayout = ['top','full','left','right','nocrop'].includes(sec.imageLayout) ? sec.imageLayout : 'none';
   const hasImage = imageLayout !== 'none' && sec.imagePath;
+  const overlayTextOnImage = sec.overlayTextOnImage !== false;
   const textAlign = ['left','center','right'].includes(sec.textAlign) ? sec.textAlign
     : ((imageLayout === 'left' || imageLayout === 'right') ? 'left' : 'center');
   const rounded = sec.roundedCorners !== false;
@@ -7309,14 +7323,34 @@ function initPopupSection(sec, idx, allSections, pageSlug) {
     const imgEl = `<div class="cps-popup-split-img" style="background-image:url('${escAttr(sec.imagePath)}');background-position:${imgPos};"></div>`;
     const textEl = `<div class="cps-popup-modal-body">${textBlock}</div>`;
     bodyMarkup = `<div class="cps-popup-split${imageLayout === 'right' ? ' cps-popup-split--reverse' : ''}">${imgEl}${textEl}</div>`;
+  } else if (imageLayout === 'nocrop' && hasImage) {
+    // Plain <img> at natural proportions rather than a cropped background-image —
+    // guarantees the whole graphic shows intact at whatever size it renders,
+    // with no risk of a crop window cutting off part of a designed image.
+    const imgEl = `<img class="cps-popup-nocrop-img" src="${escAttr(sec.imagePath)}" alt=""/>`;
+    const imgClickable = sec.imageClickable === true && primType !== 'none' && primUrl;
+    const imgLinkAttrs = imgClickable
+      ? ` role="link" tabindex="0" aria-label="${escAttr(primLabel || 'Learn more')}"`
+      : '';
+    const wrapClass = `cps-popup-nocrop-wrap${imgClickable ? ' cps-popup-nocrop-wrap--clickable' : ''}`;
+    if (overlayTextOnImage) {
+      bodyMarkup = `<div class="${wrapClass}"${imgLinkAttrs}>
+        ${imgEl}
+        <div class="cps-popup-nocrop-overlay-body">${textBlock}</div>
+      </div>`;
+    } else {
+      bodyMarkup = `<div class="${wrapClass}"${imgLinkAttrs}>${imgEl}</div>
+        <div class="cps-popup-modal-body">${textBlock}</div>`;
+    }
   } else {
     bodyMarkup = `<div class="cps-popup-modal-body">${textBlock}</div>`;
   }
 
   const overlay = document.createElement('div');
   overlay.className = `cps-popup-overlay cps-popup-overlay--${popupStyle}`;
+  const nocropBoxStyle = (imageLayout === 'nocrop' && hasImage) ? ' style="width:fit-content;"' : '';
   overlay.innerHTML = `
-    <div class="cps-popup-box ${bgClass} cps-popup-align-${textAlign}${rounded ? '' : ' cps-popup-no-round'}">
+    <div class="cps-popup-box ${bgClass} cps-popup-align-${textAlign}${rounded ? '' : ' cps-popup-no-round'}"${nocropBoxStyle}>
       <button type="button" class="cps-popup-close" aria-label="Close">&times;</button>
       ${bodyMarkup}
     </div>`;
@@ -7336,9 +7370,18 @@ function initPopupSection(sec, idx, allSections, pageSlug) {
   });
 
   const primBtnEl = overlay.querySelector('.cps-popup-btn-prim');
-  if (primBtnEl) primBtnEl.addEventListener('click', () => { closePopup(); goTo(primType, primUrl, sec.cta_primary_anchorId); });
+  if (primBtnEl) primBtnEl.addEventListener('click', (e) => { e.stopPropagation(); closePopup(); goTo(primType, primUrl, sec.cta_primary_anchorId); });
   const secBtnEl = overlay.querySelector('.cps-popup-btn-sec');
-  if (secBtnEl) secBtnEl.addEventListener('click', () => { closePopup(); goTo(secType, secUrl, sec.cta_secondary_anchorId); });
+  if (secBtnEl) secBtnEl.addEventListener('click', (e) => { e.stopPropagation(); closePopup(); goTo(secType, secUrl, sec.cta_secondary_anchorId); });
+
+  const clickableImgEl = overlay.querySelector('.cps-popup-nocrop-wrap--clickable');
+  if (clickableImgEl) {
+    const goToImage = () => { closePopup(); goTo(primType, primUrl, sec.cta_primary_anchorId); };
+    clickableImgEl.addEventListener('click', goToImage);
+    clickableImgEl.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); goToImage(); }
+    });
+  }
 
   let triggerDelay = parseFloat(sec.triggerDelay);
   if (isNaN(triggerDelay)) triggerDelay = 0.6;
@@ -7840,10 +7883,11 @@ function renderCustomSection(sec, idx, isFirst, allSections, pageSlug) {
       let dotsHtml = '';
       const bgColorStyle = `background:${bg.bgColor || CFG.colors.navy};`;
       if (bgType === 'image' && bg.imagePath) {
-        bgHtml = `<div class="cps-hero-section-slide active" style="background-image:url('${escAttr(bg.imagePath)}');background-position:${bg.imagePosition || 'center center'};"></div>`;
+        const mobilePos = bg.mobileImagePosition || bg.imagePosition || 'center center';
+        bgHtml = `<div class="cps-hero-section-slide active" style="background-image:url('${escAttr(bg.imagePath)}');background-position:${bg.imagePosition || 'center center'};--hero-mobile-pos:${mobilePos};"></div>`;
       } else if (bgType === 'slideshow' && bg.slides && bg.slides.length) {
         bgHtml = bg.slides.map((s, i) =>
-          `<div class="cps-hero-section-slide${i === 0 ? ' active' : ''}" style="background-image:url('${escAttr(s.imagePath)}');background-position:${s.position || 'center center'};"></div>`
+          `<div class="cps-hero-section-slide${i === 0 ? ' active' : ''}" style="background-image:url('${escAttr(s.imagePath)}');background-position:${s.position || 'center center'};--hero-mobile-pos:${s.position || 'center center'};"></div>`
         ).join('');
         if (bg.slides.length > 1 && bg.showDots !== false) {
           dotsHtml = `<div class="cps-hero-section-dots" id="${heroId}-dots"${bottomSpacingPx ? ` style="bottom:${16 + bottomSpacingPx}px;"` : ''}>` +
