@@ -1149,7 +1149,11 @@ h2.section-title {
    special-casing needed at all. Tile Size always pins the SMALLER of the two
    ratio numbers (e.g. the 3 in both 3:4 and 4:3) so "Large" always means the
    same visual scale regardless of orientation — the other side scales up
-   from it, rather than Tile Size always mapping onto literal CSS width. */
+   from it, rather than Tile Size always mapping onto literal CSS width.
+   Tiles only shrink (flex-shrink + aspect-ratio, rather than a fixed height)
+   in the edge case where even a single tile doesn't fit the viewport width
+   (e.g. a wide/large tile on a narrow phone) — normal multi-per-row layout
+   never needs to shrink, since wrapping handles that instead. */
 .cps-ig-grid {
   display: flex;
   flex-wrap: wrap;
@@ -1162,9 +1166,11 @@ h2.section-title {
 .cps-ig-grid--rounded .cps-ig-tile { border-radius: 12px; }
 .cps-ig-tile {
   position: relative;
-  flex: 0 0 var(--ig-tile-w, 220px);
+  flex: 0 1 var(--ig-tile-w, 220px);
+  min-width: 0;
   width: var(--ig-tile-w, 220px);
-  height: var(--ig-tile-h, 220px);
+  max-width: 100%;
+  aspect-ratio: var(--ig-tile-w, 1) / var(--ig-tile-h, 1);
   overflow: hidden;
   background: var(--cream);
   z-index: 1;
