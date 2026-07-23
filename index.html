@@ -1170,7 +1170,7 @@ h2.section-title {
   min-width: 0;
   width: var(--ig-tile-w, 220px);
   max-width: 100%;
-  aspect-ratio: var(--ig-tile-w, 1) / var(--ig-tile-h, 1);
+  aspect-ratio: var(--ig-tile-ratio, 1 / 1);
   overflow: hidden;
   background: var(--cream);
   z-index: 1;
@@ -8300,7 +8300,7 @@ function renderCustomSection(sec, idx, isFirst, allSections, pageSlug) {
       if (igRw <= igRh) { igTileW = igTile; igTileH = Math.round(igTile * igRh / igRw); }
       else { igTileH = igTile; igTileW = Math.round(igTile * igRw / igRh); }
       const igReveal = (sec.revealStyle === 'clear-first' || sec.revealStyle === 'no-blur') ? sec.revealStyle : 'blur-first';
-      const igStyle = `--ig-blur:${igBlur}px;--ig-tile-w:${igTileW}px;--ig-tile-h:${igTileH}px;`;
+      const igStyle = `--ig-blur:${igBlur}px;--ig-tile-w:${igTileW}px;--ig-tile-h:${igTileH}px;--ig-tile-ratio:${igTileW} / ${igTileH};`;
 
       const igTiles = igItems.map((it, i) => {
         const hasText = !!(it.title || it.subtitle);
